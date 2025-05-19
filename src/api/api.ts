@@ -1,12 +1,8 @@
 import axios from 'axios';
 
-// Define la URL base de la API usando una variable de entorno
-// Si no está definida (por ejemplo, en desarrollo local), usa la URL de Heroku por defecto
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://fitoffice-a7ed6ea26ba4.herokuapp.com';
-
 // API base instance
 const api = axios.create({
-  baseURL: API_BASE_URL, // Usa la variable de entorno
+  baseURL: 'https://fitoffice-a7ed6ea26ba4.herokuapp.com', // Cambiado a la URL completa del backend
   timeout: 10000, // Aumentado el timeout por si acaso
   headers: {
     'Content-Type': 'application/json',
